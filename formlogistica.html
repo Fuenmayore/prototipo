@@ -1,0 +1,63 @@
+<div class="card">
+    <div class="card-header">
+        <h2>Formulario de Logística</h2>
+    </div>
+
+    <div class="card-body">
+        <form action="#" method="post">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="transportista">Transportista:</label>
+                        <input class="form-control" type="text" id="transportista" name="transportista" placeholder="Nombre del transportista" required>
+                    </div>
+
+                    <div class="form-group mt-4">
+                        <label for="vehiculo">Tipo de Vehículo:</label>
+                        <select class="form-control" id="vehiculo" name="vehiculo" required>
+                            <option value="" disabled selected>Seleccione una opción</option>
+                            <option value="Camión">Camión</option>
+                            <option value="Furgoneta">Furgoneta</option>
+                            <option value="Motocicleta">Motocicleta</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group mt-4">
+                        <label for="destino">Destino:</label>
+                        <input class="form-control" type="text" id="destino" name="destino" placeholder="Ciudad o ubicación" required>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="fecha">Fecha de Registro:</label>
+                        <input class="form-control" type="date" id="fecha" name="fecha" readonly>
+                    </div>
+
+                    <div class="form-group mt-4">
+                        <label for="turno">Turno:</label>
+                        <input class="form-control" type="text" id="turno" name="turno" readonly>
+                    </div>
+
+                    <div class="form-group mt-4">
+                        <label for="estado">Estado del Envío:</label>
+                        <select class="form-control" id="estado" name="estado" required>
+                            <option value="" disabled selected>Seleccione una opción</option>
+                            <option value="En preparación">En preparación</option>
+                            <option value="En tránsito">En tránsito</option>
+                            <option value="Entregado">Entregado</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mt-4">
+                <label for="observaciones">Observaciones:</label>
+                <textarea class="form-control" id="observaciones" name="observaciones" rows="3" placeholder="Notas adicionales sobre el envío"></textarea>
+            </div>
+
+            <button class="btn btn-outline-primary mt-4" type="submit">Registrar Envío</button>
+        </form>
+    </div>
+</div>

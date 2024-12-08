@@ -1,0 +1,75 @@
+<div class="card">
+    <div class="card-header">
+        <h2>Formulario de Inventarios</h2>
+    </div>
+
+    <div class="card-body">
+        <form action="#" method="post">
+            <div class="row">
+                <!-- Columna izquierda -->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="codigo">Código de Producto:</label>
+                        <select class="form-control" id="select_codigo" name="select_codigo" onchange="cargar_productos()" required>
+                            <option value="" disabled selected>Seleccione un código</option>
+                            <option value="PRO-12345">PRO-12345</option>
+                            <option value="PRO-67890">PRO-67890</option>
+                            <option value="PRO-54321">PRO-54321</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group mt-4">
+                        <label for="nombreProducto">Nombre del Producto:</label>
+                        <input class="form-control" type="text" id="nombreProducto" name="nombreProducto" placeholder="Nombre automático" readonly>
+                    </div>
+
+                    <div class="form-group mt-4">
+                        <label for="cantidad">Cantidad en Stock:</label>
+                        <input class="form-control" type="number" id="cantidad" name="cantidad" min="1" placeholder="Cantidad disponible" required>
+                    </div>
+
+                    <div class="form-group mt-4">
+                        <label for="ubicacion">Ubicación en Almacén:</label>
+                        <input class="form-control" type="text" id="ubicacion" name="ubicacion" placeholder="Ej. Estante A-5" required>
+                    </div>
+                </div>
+
+                <!-- Columna derecha -->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="categoria">Categoría:</label>
+                        <select class="form-control" id="categoria" name="categoria" required>
+                            <option value="" disabled selected>Seleccione una categoría</option>
+                            <option value="Herramientas">Herramientas</option>
+                            <option value="Materiales de Construcción">Materiales de Construcción</option>
+                            <option value="Electrónica">Electrónica</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group mt-4">
+                        <label for="fecha">Fecha de Registro:</label>
+                        <input class="form-control" type="date" id="fecha" name="fecha" readonly>
+                    </div>
+
+                    <div class="form-group mt-4">
+                        <label for="turno">Turno:</label>
+                        <input class="form-control" type="text" id="turno" name="turno" readonly>
+                    </div>
+
+                    <div class="form-group mt-4">
+                        <label for="responsable">Responsable del Registro:</label>
+                        <input class="form-control" type="text" id="responsable" name="responsable" placeholder="Nombre del encargado" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mt-4">
+                <label for="notas">Notas Adicionales:</label>
+                <textarea class="form-control" id="notas" name="notas" rows="3" placeholder="Observaciones o comentarios"></textarea>
+            </div>
+
+            <button class="btn btn-outline-primary mt-4" type="submit">Registrar Inventario</button>
+        </form>
+    </div>
+</div>
